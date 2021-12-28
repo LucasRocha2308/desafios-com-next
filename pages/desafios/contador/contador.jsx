@@ -1,4 +1,5 @@
 import { useState } from "react";
+import DisplayContador from "../../components/DisplayContador/displayContador";
 
 export default function contador() {
   const [number, setNumber] = useState(0);
@@ -19,7 +20,7 @@ export default function contador() {
         flexDirection: "column",
     }}>
       <h1>Contador</h1>
-      <div>{number}</div>
+      <DisplayContador number={number}/>
       <button onClick={() => aumentarValor()}>Aumentar</button>
       <button onClick={() => diminuirValor()}>Diminuir</button>
     </div>
